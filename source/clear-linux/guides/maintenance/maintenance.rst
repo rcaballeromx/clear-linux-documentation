@@ -13,3 +13,5 @@ maintaining |CLOSIA| after :ref:`installation <get-started>` is completed.
    bulk-provision
    mixer
    validate-signatures
+   time
+   maintenance-quick-tasks

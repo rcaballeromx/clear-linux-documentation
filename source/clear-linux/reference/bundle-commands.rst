@@ -3,20 +3,48 @@
 Useful bundle commands
 ######################
 
-To see a list of currently-installed bundles, enter:
+ * See a list of currently-installed bundles:
 
-.. code-block:: console
+   .. code-block:: console
 
-   # swupd bundle-list
+      # swupd bundle-list
 
-To see the list of all available bundles, enter:
+   or
 
-.. code-block:: console
+   .. code-block:: console
 
-   # swupd bundle-list --all
+      ls /usr/share/clear/bundles
 
-To add a bundle, enter:
+ * See the list of all available bundles:
 
-.. code-block:: console
+   .. code-block:: console
 
-   # swupd bundle-add [bundle name]
+      # swupd bundle-list --all
+
+   or
+
+   .. code-block:: console
+
+      cat /var/lib/swupd/<build number>/Manifest.MoM
+
+ * Add a bundle:
+
+   .. code-block:: console
+
+      # swupd bundle-add <bundle name>
+
+ * See which packages are included in a given bundle:
+
+   https://download.clearlinux.org/update/<VER>/Manifest.<BUNDLE>
+
+ * Subscribe to a bundle:
+
+   .. code-block:: console
+
+      swupd bundle-add <bundle name>
+
+ * Remove a bundle
+
+   .. code-block:: console
+
+      swupd bundle-remove <bundle name>
