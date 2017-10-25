@@ -3,7 +3,7 @@
 Install Clear Linux over the network with iPXE
 ##############################################
 
-This guide shows how to install |CL| through :abbr:`PXE (Pre-boot Execution Environment)`.
+This guide shows how to install |CLOSIA| through :abbr:`PXE (Pre-boot Execution Environment)`.
 
 PXE is an industry standard describing the client-server interaction with network-boot software using
 the DHCP and TFTP protocols. This guide shows one possible use of this
@@ -86,11 +86,11 @@ setup manually, follow the steps below.
 
       $ sudo -s
 
-#. Add the ``pxe-server`` bundle to your |CL| system. This bundle has all the
-   files needed to run a PXE server.
+#. Add these |CL| bundles (``network-basic`` and ``pxe-server``).
 
    .. code-block:: console
 
+      # swupd bundle-add network-basic
       # swupd bundle-add pxe-server
 
 #. Download the latest network-bootable release of |CL| and extract the
@@ -157,6 +157,7 @@ setup manually, follow the steps below.
 
    .. code-block:: console
 
+      # systemctl daemon-reload
       # systemctl start nginx
       # systemctl enable nginx
 
