@@ -1,12 +1,13 @@
-.. _time::
+.. _time:
 
 Set the time
 ############
 
-|CLOSIA| utilizes `systemd-timesyncd.service` to sync time. Default network
-time protocol (NTP) servers are configured as time1.google.com,
-time2.google.com, time3.google.com, and time4.google.com. It is not possible
-to set the time manually, via `timedatectl` or to use `RTC` mode.
+|CLOSIA| utilizes the `systemd-timesyncd.service` daemon to sync time.
+The default network time protocol (NTP) servers are configured as
+time1.google.com, time2.google.com, time3.google.com, and time4.google.com.
+In |CL|, it is not possible to set the time manually, via `timedatectl`, or
+use `RTC` mode.
 
 This section provides instructions to set the time in the event that the
 time is incorrect on your |CL| system and the default NTP servers cannot be
@@ -45,10 +46,10 @@ reached.
 
 #. Restart the `timesyncd` daemon
 
-   .. code-block::
+   .. code-block:: console
 
       systemctl  restart systemd-timesyncd
 
-.. _Note::
+.. note::
    Check to make sure your time is correctly set, enter the :command:`date`
    command.

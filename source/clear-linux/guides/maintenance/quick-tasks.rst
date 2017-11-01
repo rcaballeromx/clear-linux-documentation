@@ -15,11 +15,11 @@ Quick tasks included in this document:
 
 .. _check-current-release:
 
-Check the current release running on your system
-************************************************
+Check the Clear Linux release running on your system
+****************************************************
 
-To check which |CL| release is running on your
-system, enter one of the following commands:
+To check which |CL| release is currently running on your
+system, open a terminal emulator and enter one of the following commands:
 
 .. code-block:: console
 
@@ -63,7 +63,7 @@ Run the following command:
 
    c_hash ca.crt
 
-Copy the output to the left of the :guilabel:`=>`. This is be your hash.
+Copy the output to the left of the :guilabel:`=>`. This is your hash.
 Run the command below with the copied output in place of `<HASH>`.
 
 .. code-block:: console
